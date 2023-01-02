@@ -10,13 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            LinearGradient(colors: [.blue, .black], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
+            
+            Image("stars")
+                .renderingMode(.template)
+                .resizable()
+                .scaledToFit()
+                .padding()
+                .foregroundColor(.yellow)
         }
-        .padding()
     }
 }
 
